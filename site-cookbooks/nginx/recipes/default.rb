@@ -26,3 +26,15 @@ template 'nginx.conf' do
   mode '0644'
   notifies :reload, "service[nginx]"
 end
+
+directory '/home/vagrant/html' do
+  owner 'root'
+  group 'root'
+  mode '0755'
+  action :create
+end
+
+link '/usr/share/nginx/html/scr' do
+  to '/home/vagrant/html'
+  link_type  :symbolic
+end
