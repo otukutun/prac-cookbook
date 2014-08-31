@@ -28,9 +28,9 @@ template 'nginx.conf' do
 end
 
 directory '/home/vagrant/html' do
-  owner 'root'
+  owner 'vagrant'
   group 'root'
-  mode '0755'
+  mode '0777'
   action :create
 end
 
