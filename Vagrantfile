@@ -93,6 +93,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     chef.run_list = %w[
     recipe[yum-epel]
     recipe[nginx]
+    recipe[php-env]
     ]
     # You may also specify custom JSON attributes:
     #chef.json = { :mysql_password => "foo" }
